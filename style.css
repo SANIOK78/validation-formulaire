@@ -1,0 +1,156 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(to right, #f7aa03, #1303fa); 
+    font-family: Open sans, Helvetica, sans-serif;
+    padding: clamp(20px, 5vw, 50px) 10px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background: #fff;
+    color: #212121;
+    border-radius: 5px;
+    border: 2px solid red;
+}
+
+/* class injecter avec JS */
+.container.shake {
+    animation: shake 0.4s;
+}
+
+@keyframes shake {
+    33% {
+        transform: translateX(-5px);
+    }
+    66%{
+        transform: translateX(5px);
+    }
+}
+
+h2 {
+    font-size: 30px;
+    font-family: Raleway, sans-serif;
+    text-align: center;
+}
+
+.form-group {
+    margin-top: 30px;
+}
+
+label {
+    font-size: 20px;
+    margin-bottom: 5px;
+    display: block;
+    position: relative;
+}
+
+input {
+    display: block;
+    width: 100%;
+    font-size: 18px;
+    color: #212121;
+    padding: 10px 5px;
+    background: transparent;
+    border: none;
+    outline: 0;
+    border-bottom: 1px solid #ccc;
+}
+
+input:focus {
+   box-shadow: 0 1px 6px blue;
+}
+
+input::placeholder {
+    font-size: 14px;
+}
+
+.icon-input-container {
+    position: relative;
+}
+
+.icone-verif {
+    width: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 5px;
+    display: none;
+}
+
+.error-msg {
+    margin-top: 7px;
+    color: red;
+    font-weight: 400;
+    display: none;
+}
+
+.pswd-info {
+    margin-top: 8px;
+    color: #a9a9a9;
+    font-weight: 400;
+    display: block;
+}
+
+.lines {
+    width: 80%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.l1, .l2, .l3 {
+    height: 6px;
+    margin: 15px 15px 20px;
+    width: 30%;
+    position: relative;
+    display: none;
+}
+
+.l1 {
+    background-color: #cf5914;
+}
+.l2 {
+    background-color: #fdeb50;
+}
+.l3 {
+    background-color: #14e214;
+}
+
+.lines span {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 10px;
+}
+
+form button {
+    font-size: 20px;
+    min-width: 150px;
+    display: block;
+    margin: 40px auto 10px;
+    padding: 12px 15px;
+    background-color: rgb(238, 123, 47);
+    /* border: 1px solid #f1f1f13d; */
+    border: none;
+    color: #fff;
+    border-radius: 6px;
+    font-family: Raleway;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+form button:hover {
+    /* background-color: #e3dfa2; */
+    box-shadow: 0 2px 6px blue;
+}
+
